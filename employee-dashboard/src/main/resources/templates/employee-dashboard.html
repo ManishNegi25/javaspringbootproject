@@ -1,0 +1,41 @@
+<html xmlns:th="http//www.thymeleaf.org">
+<body>
+	<div th:insert="add.css.html"></div>
+<div class='dvv'>
+<label class='lah'>EMPLOYEE DASHBOARD</label>
+</div>
+<div class='container'>
+<a href="add" class='la'><i class='fa fa-user-plus'></i>ADD EMPLOYEE</a>
+<div class='card col-md-12 mx-auto'>
+<div class='card-body'>
+<div>
+<label  class='la' style='color:red'>EMPLOYEE DASH BOARD HAS NO RECORD</label>
+</div>
+<table class='table table-hover'>
+	<thead>
+<tr>
+<th>PRESON ID</th><th>FIRST NAME</th><th>LAST NAME </th><th>PHONE NUMBER</th><th>EMAIL ID</th><th>DEPARTMENT</th><th>SALARY</th><th style='color:blue'>ACTION</th>
+</tr>
+</thead>
+<tbody>
+	<tr th:each="emp:${elist}">
+<td th:text="${emp.eid}"></td>
+<td th:text="${emp.firstname}"></td>
+<td th:text="${emp.lastname}"></td>
+<td th:text="${emp.phone}"></td>
+<td th:text="${emp.email}"></td>
+<td th:text="${emp.department}"></td>
+<td th:text="${emp.salary}"></td>
+<td>
+<a href="">EDIT</a>
+<a href="">DELETE</a>
+</td>
+	</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
+	
